@@ -30,14 +30,7 @@
             die('Could not connect to MySQL: ' . mysqli_connect_error());
         }
         mysqli_query($conn, 'SET NAMES \'utf8\'');
-        $sql = "INSERT INTO zamówienia (imie, nazwisko, miejscowosc,ulica, nr_domu, Asortyment, ilosc, data_zamowienia) VALUES ('$imie','$nazwisko','$miejscowosc','$ulica','$nrdomu',$asortyment', $ilosc, '$data')";
 
-        if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-        
         mysqli_close($conn);
         ?>
 
