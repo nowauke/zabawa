@@ -41,6 +41,7 @@
 
                 $result = mysqli_query($conn, $query);
             }
+            echo '<div class="tabelka">';
             echo '<table class="table">';
             echo '<tr><thead class="thead-dark">';
             echo '<th>Imie</th>';
@@ -69,6 +70,7 @@
 
             mysqli_free_result($result);
             echo '</table>';
+            echo '</div>';
             mysqli_close($conn);
             ?>
 
