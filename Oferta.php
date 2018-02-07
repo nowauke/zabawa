@@ -9,13 +9,15 @@ mysqli_query($conn, 'SET NAMES \'utf8\'');
 
 echo '<table>';
 echo '<tr>';
-echo '<th>nazwa</th>';
-echo '<th>cena</th>';
-echo '<th>zdjęcie</th>';
+echo '<th>Lp.</th>';
+echo '<th>Nazwa</th>';
+echo '<th>Cena</th>';
+echo '<th>Zdjęcie</th>';
 echo '</tr>';
 $result = mysqli_query($conn, 'SELECT nazwa, cena, `zdjęcie` FROM OFERTA');
 while (($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) != NULL) {
     echo '<tr>';
+    echo '<td>' . $row['id'] . '</td>';
     echo '<td>' . $row['nazwa'] . '</td>';
     echo '<td>' . $row['cena'] . '</td>';
     echo '<td>' . $row['zdjęcie'] . '</td>';
