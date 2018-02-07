@@ -6,13 +6,13 @@
     <body>
         <div>
             <form action="zamowienia.php" method="post">
-                Imię: <input type="text" name="name"><br>
-                Nazwisko: <input type="text" name="surname"><br>
-                Miejscowośc: <input type="text" name="city"><br>
-                Ulica: <input type="text" name="street"><br>
-                Nr domu: <input type="text" name="house">
-                Data zamówienia : <input type="date" name="date">
-                <button type="submit">Prześlij zamówienia</button>
+                Imię: <input class="form-control" type="text" name="name"><br>
+                Nazwisko: <input class="form-control" type="text" name="surname"><br>
+                Miejscowośc: <input class="form-control" type="text" name="city"><br>
+                Ulica: <input class="form-control" type="text" name="street"><br>
+                Nr domu: <input class="form-control" type="text" name="house">
+                Data zamówienia : <input class="form-control" type="date" name="date">
+                <button class="btn btn-primary" type="submit">Prześlij zamówienia</button>
 
             </form>
         </div>
@@ -39,8 +39,8 @@
        $result = mysqli_query($conn, $query);
        
         }
-echo '<table>';
-echo '<tr>';
+echo '<table class="table">';
+echo '<tr><thead class="thead-dark">';
 echo '<th>Imie</th>';
 echo '<th>Nazwisko</th>';
 echo '<th>Miejscowosc</th>';
@@ -49,7 +49,7 @@ echo '<th>Nr domu</th>';
 echo '<th>Asortyment</th>';
 echo '<th>Ilość</th>';
 echo '<th>Data Zamowienia</th>';
-echo '</tr>';
+echo '</thead></tr>';
 $result = mysqli_query($conn, 'SELECT imie, nazwisko, miejscowosc, ulica, nr_domu, Asortyment, ilosc, data_zamowienia FROM `zamówienia`');
 
 while (($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) != NULL) {
