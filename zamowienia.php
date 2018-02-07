@@ -11,6 +11,7 @@
                 Miejscowośc: <input type="text" name="city"><br>
                 Ulica: <input type="text" name="street"><br>
                 Nr domu: <input type="text" name="house">
+                <button type="submit">Prześlij zamówienia</button>
 
             </form>
         </div>
@@ -36,32 +37,7 @@
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
-        echo '<table class="table"><thead class="thead-dark">';
-        echo '<tr>';
-        echo '<th>Imię</th>';
-        echo '<th>Nazwisko</th>';
-        echo '<th>Miejscowość</th>';
-        echo '<th>Ulica</th>';
-        echo '<th>Numer domu</th>';
-        echo '<th>Asortyment</th>';
-        echo '<th>Ilość szt.</th>';
-        echo '<th>Data zamówienia</th>';
-        echo '</thead></tr>';
-        $result = mysqli_query($conn, 'SELECT imie, nazwisko, miejscowosc, ulica, nr_domu, Asortyment, ilosc, data_zamowienia FROM `zamówienia`');
-        while (($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) != NULL) {
-            echo '<tr>';
-            echo '<td>' . $row['imie'] . '</td>';
-            echo '<td>' . $row['nazwisko'] . '</td>';
-            echo '<td>' . $row['miejscowosc'] . '</td>';
-            echo '<td>' . $row['ulica'] . '</td>';
-            echo '<td>' . $row['nr_domu'] . '</td>';
-            echo '<td>' . $row['Asortyment'] . '</td>';
-            echo '<td>' . $row['ilosc'] . '</td>';
-            echo '<td>' . $row['data_zamowienia'] . '</td>';
-            echo '</tr>';
-        }
-        mysqli_free_result($result);
-        echo '</table>';
+        
         mysqli_close($conn);
         ?>
 
