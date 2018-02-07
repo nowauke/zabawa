@@ -10,6 +10,7 @@
                 Nazwisko: <input type="text" name="surname"><br>
                 Miejscowośc: <input type="text" name="city"><br>
                 Ulica: <input type="text" name="street"><br>
+                Nr domu: 
                 
             </form>
         </div>
