@@ -26,7 +26,7 @@
                 echo '<td>' . $row['id'] . '</td>';
                 echo '<td>' . $row['nazwa'] . '</td>';
                 echo '<td>' . $row['cena'] . '</td>';
-                echo '<td>' . $row['zdjęcie'] . '</td>';
+                echo '<td><div class="fotasor>"' . $row['zdjęcie'] . '</div></td>';
                 echo '</tr>';
             }
             mysqli_free_result($result);
