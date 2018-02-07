@@ -15,7 +15,6 @@
             echo '<div class="tabelka">';
             echo '<table class="table"><thead class="thead-dark">';
             echo '<tr>';
-            echo '<th>Lp.</th>';
             echo '<th>Asortyment</th>';
             echo '<th>Cena za szt.</th>';
             echo '<th>Zdjęcie</th>';
@@ -23,7 +22,6 @@
             $result = mysqli_query($conn, 'SELECT nazwa, cena, `zdjęcie` FROM OFERTA');
             while (($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) != NULL) {
                 echo '<tr>';
-                echo '<td>' . $row['id'] . '</td>';
                 echo '<td>' . $row['nazwa'] . '</td>';
                 echo '<td>' . $row['cena'] . '</td>';
                 echo '<td>' . $row['zdjęcie'] . '</td>';
