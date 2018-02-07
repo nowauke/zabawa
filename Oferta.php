@@ -7,13 +7,13 @@ if (!$conn) {
 }
 mysqli_query($conn, 'SET NAMES \'utf8\'');
 
-echo '<table>';
+echo '<table class="table"><thead class="thead-dark">';
 echo '<tr>';
 echo '<th>Lp.</th>';
 echo '<th>Nazwa</th>';
 echo '<th>Cena</th>';
 echo '<th>Zdjęcie</th>';
-echo '</tr>';
+echo '</thead></tr>';
 $result = mysqli_query($conn, 'SELECT nazwa, cena, `zdjęcie` FROM OFERTA');
 while (($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) != NULL) {
     echo '<tr>';
