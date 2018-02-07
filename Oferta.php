@@ -26,8 +26,3 @@ while (($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) != NULL) {
 mysqli_free_result($result);
 echo '</table>';
 mysqli_close($conn);
-
-
-
-
-?>
