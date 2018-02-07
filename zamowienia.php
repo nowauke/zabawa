@@ -3,6 +3,7 @@
         <title>Zamówienia</title>
         <meta charset="UTF-8">
         <link href="css/zamowienia.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div id="container">
